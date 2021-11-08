@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" min="2" v-model="name" placeholder="Name"/>
+    <div>{{nameWarning}}</div>
+    <input type="text" v-model="email" placeholder="Email"/>
+    <div>{{emailWarning}}</div>
+    <div>{{sub}}</div>
+    <div v-for="item in list">
+        <div v-on:click="{item.hidden=true}" v-bind:class="{hide:item.hidden}">{{item.name}}</div>
+        <div v-on:click="{item.hidden=false}" v-bind:class="{hide:!item.hidden}">{{item.codename}}</div>
+    </div>
+
+
+</div>
+
+<style>
+    .hide{
+        display: none;
+    }
+</style>
+<script src="vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
