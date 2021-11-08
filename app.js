@@ -1,7 +1,7 @@
 Vue.component('name', {
     props:['p'],
-    template: '<div v-on:click="{p.hide=true}" v-bind:class="{hide:p.hidden}">{{p.name}}</div>' +
-        '<div v-on:click="{p.hide=false}" v-bind:class="{hide:!p.hidden}">{{p.codename}}</div>'
+    template: '<div v-on:click="{p.hidden=true}" v-bind:class="{hide:p.hidden}">{{p.name}}</div>' +
+        '<div v-on:click="{p.hidden=false}" v-bind:class="{hide:!p.hidden}">{{p.codename}}</div>'
 })
 
 
@@ -19,7 +19,7 @@ var app = new Vue ({
             {
                 name:"Protagonist",
                 codename:"Joker",
-                hidden: false,
+                hidden: false
             },
             {
                 name:"Anne",
