@@ -19,7 +19,7 @@ var app = new Vue ({
             {
                 name:"Protagonist",
                 codename:"Joker",
-                hidden: true
+                hidden: false,
             },
             {
                 name:"Anne",
